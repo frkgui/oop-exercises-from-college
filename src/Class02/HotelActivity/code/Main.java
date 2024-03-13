@@ -1,10 +1,8 @@
-package Class02.HotelActivity;
+package Class02.HotelActivity.code;
 
 public class Main {
 
     public static void main(String[] args) {
-
-
 
 
     }
