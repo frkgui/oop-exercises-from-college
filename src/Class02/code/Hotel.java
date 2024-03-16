@@ -1,4 +1,4 @@
-package Class02.HotelActivity.code;
+package Class02.code;
 
 import java.util.ArrayList;
 
@@ -11,8 +11,25 @@ public class Hotel {
     private Room[] allRooms = new Room[20];
     private ArrayList<Guest> guestList = new ArrayList<>();
 
+    // methods
 
-    // getter & setter
+    public void checkAvaliableRooms(){
+
+
+    }
+
+    public void addGuest(Guest guest){
+        this.guestList.add(guest);
+    }
+
+    public Hotel(String hotelName, ArrayList<Room> avaliableRooms, Room[] allRooms, ArrayList<Guest> guestList) {
+        this.hotelName = hotelName;
+        this.avaliableRooms = avaliableRooms;
+        this.allRooms = allRooms;
+        this.guestList = guestList;
+    }
+
+    // getter & setter + constructor
 
     public String getHotelName() {
         return hotelName;
@@ -46,11 +63,6 @@ public class Hotel {
         this.guestList = guestList;
     }
 
-    // methods
-
-    public void addGuest(Guest guest){
-        this.guestList.add(guest);
-    }
 
 }
 

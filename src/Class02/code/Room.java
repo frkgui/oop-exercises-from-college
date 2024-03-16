@@ -1,4 +1,4 @@
-package Class02.HotelActivity.code;
+package Class02.code;
 
 public class Room {
 
@@ -13,6 +13,10 @@ public class Room {
         this.idRoom = idRoom;
         this.isBooked = false; // when you create a room it will start with "isBooked" false.
     }
+
+    // methods
+
+    //checkout room
 
 
     // getters & setters

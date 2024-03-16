@@ -1,4 +1,4 @@
-package Class02.HotelActivity.code;
+package Class02.code;
 
 import java.time.LocalDateTime;
 
