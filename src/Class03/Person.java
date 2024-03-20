@@ -73,7 +73,7 @@ public class Person {
         if(this.gender == Gender.W){
 
             if(dad.gender == Gender.M){
-                return new Person(name, gender, eyeColorSelection(this.eyesColor, dad.getEyesColor()));
+                return new Person(name, gender, eyeColorSelection(this.eyesColor, dad.getEyesColor()), dad, Person.this);
             }
 
         }

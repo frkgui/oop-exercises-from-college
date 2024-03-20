@@ -3,7 +3,7 @@ package Class02.code;
 public class Guest {
 
     // declaration
-    private int idGuest;
+    private int idGuest = 0;
     private String guestName;
     private String guestCPF;
     private String guestPhone;
@@ -11,7 +11,9 @@ public class Guest {
     // methods
 
 
-    // getters & setters
+    // getters & setters & constructor
+
+
 
     public int getIdGuest() {
         return idGuest;

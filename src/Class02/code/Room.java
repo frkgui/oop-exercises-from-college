@@ -19,7 +19,13 @@ public class Room {
     //checkout room
 
 
-    // getters & setters
+    // getters & setters & toString
+
+
+    @Override
+    public String toString() {
+        return "Quarto número: " + idRoom + "\n";
+    }
 
     public int getIdRoom() {
         return idRoom;
