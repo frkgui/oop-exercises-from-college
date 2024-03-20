@@ -1,0 +1,28 @@
+DATA: 19/03    MATERIA: Programação Orientada a Objetos :)
+
+>> sobrecarga de métodos:
+
+- diferentes métodos com o mesmo nome, dependendo da entrada ou assinatura.
+- int nome(int x, int y), int nome (float x, float y).
+
+>> construtor:
+
+- métodos que aloca memória e cria de fato um objeto.
+- apenas salva o espaço necesário para criar uma classe.
+- usa sobrecarga diretamente.
+
+>> getters & setters:
+
+- usado por conta da segurança (privado).
+- get = retorna dados dentro de um objeto privado.
+- set = seta dados dentro de um objeto privado. 
+
+/*
+
+* compilador e interpretador. 
+* python quebra regras básicas de poo.
+* toda comunição é via método. 
+
+*/
+
+>> exercício de aula -> classe pessoa;
