@@ -7,6 +7,7 @@ public class Main {
         Country brasil = new Country("BRA","Brasil", 8510000);
         Country espanha = new Country("ESP","Espanha", 506030);
 
+
         brasil.setPaisesVizinhos("SUR","Suriname");
         brasil.setPaisesVizinhos("COL","Colombia");
         brasil.setPaisesVizinhos("URY","Uruguai");
@@ -20,6 +21,12 @@ public class Main {
         System.out.println(brasil.verificaLimitrofe(espanha));
         brasil.verificaVizinhos(espanha);
 
+        Continent americaDoSul = new Continent("America do Sul");
+
+        americaDoSul.setPopulacaoTotalDoContinente(425664218);
+        americaDoSul.setDimensaoTotalDoContinente(17800000);
+
+        System.out.println(americaDoSul.verificaDensidadePopulacional());
 
 
 
