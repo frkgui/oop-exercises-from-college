@@ -73,12 +73,13 @@ public class Person {
         if(this.gender == Gender.W){
 
             if(dad.gender == Gender.M){
+                System.out.println("\nPessoa criada com sucesso!");
                 return new Person(name, gender, eyeColorSelection(this.eyesColor, dad.getEyesColor()), dad, Person.this);
             }
 
         }
 
-        System.out.println("Erro: Your Gender " + this.gender + " can't generate a person.");
+        System.out.println("\nErro: Your Gender (" + this.gender + ") can't generate a person.");
         return null;
 
     }
@@ -99,6 +100,45 @@ public class Person {
                 "\nEyeColor: " + this.getEyesColorStr() +
                 "\nFather's name: " + this.father.getName() +
                 "\nMother's name: " + this.mother.getName());
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public Person getFather() {
+        return father;
+    }
+
+    public Person getMother() {
+        return mother;
+    }
+
+    public String verificaIgualdadeSemantica(Person pessoaDois){
+        if(this.getName() == pessoaDois.getName() && this.getMother() == pessoaDois.getMother()){
+        return "As duas pessoas verificadas SÃO semânticamente iguais!";
+        }else
+            return "As duas pessoas verificadas NÃO são semânticamente iguais";
+    }
+
+    public String verificaIrmaos(Person pessoaDois){
+
+        if(this.getName() != pessoaDois.getName() && this.getMother() == pessoaDois.getMother()){
+            return "As duas pessoas verificadas SÃO irmãs!";
+        }else
+            return "As duas pessoas verificadas NÃO são irmãs";
+    }
+
+    public String verificaAntecessor(Person pessoaDois){
+
+        if(this.getMother() == pessoaDois || this.getFather() == pessoaDois){
+            return "\nA pessoa verificada é seu pai/mãe.";
+        }else if(this.getMother().getFather() == pessoaDois
+                || this.getMother().getMother() == pessoaDois
+                    || this.getFather().getFather() == pessoaDois || this.getFather().getMother() == pessoaDois){
+                        return "\nA pessoa verificada é antecessor(a) de seu pai/mãe.";
+        }
+        return "Essa pessoa não é antecessor(a) seu.";
     }
 
 }
