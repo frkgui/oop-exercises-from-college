@@ -1,7 +1,5 @@
 package Class04;
 
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -9,8 +7,22 @@ public class Main {
         Country brasil = new Country("BRA","Brasil", 8510000);
         Country espanha = new Country("ESP","Espanha", 506030);
 
-       brasil.setPaisesVizinhos("SUR","Suriname");
-       brasil.setPaisesVizinhos("COL","Colombia");
+        brasil.setPaisesVizinhos("SUR","Suriname");
+        brasil.setPaisesVizinhos("COL","Colombia");
+        brasil.setPaisesVizinhos("URY","Uruguai");
+        brasil.setPaisesVizinhos("PRY","Paraguai");
+
+        espanha.setPaisesVizinhos("AND", "Andorra");
+        espanha.setPaisesVizinhos("FR", "França");
+        espanha.setPaisesVizinhos("PT", "Portugal");
+
+        System.out.println(brasil.verificaIgualdade(espanha));
+        System.out.println(brasil.verificaLimitrofe(espanha));
+        brasil.verificaVizinhos(espanha);
+
+
+
+
 
     }
 }

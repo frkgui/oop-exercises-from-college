@@ -98,17 +98,20 @@ public class Country {
     }
 
     public void verificaVizinhos(Country paisComparado){
+        boolean temVizinhoEmComum = false;
 
-        for (int i = 0; i < this.paisesVizinhos.size(); i++) {
-            for (int j = 0; j < paisComparado.paisesVizinhos.size(); j++) {
-                if(this.paisesVizinhos.get(i) == paisComparado.getPaisesVizinhos().get(j)){
-                    System.out.printf("\nOs dois paises possuem %s como vizinho!", this.paisesVizinhos.get(i));
-                }else System.out.println("\nOs países não possuem vizinhos em comum!");
+        for (Country vizinho : this.paisesVizinhos) {
+            for (Country vizinhoComparado : paisComparado.getPaisesVizinhos()) {
+                if(vizinho.equals(vizinhoComparado)){
+                    System.out.printf("\nOs dois paises possuem %s como vizinho!", vizinho.getNomePais());
+                    temVizinhoEmComum = true;
+                }
             }
-
         }
 
-
+        if (!temVizinhoEmComum) {
+            System.out.println("\nOs países não possuem vizinhos em comum!");
+        }
     }
 
 
